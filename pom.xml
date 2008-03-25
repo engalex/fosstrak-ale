@@ -7,7 +7,7 @@
 
   <groupId>org.accada.fc</groupId>
   <artifactId>fc</artifactId>
-  <version>0.3.1-SNAPSHOT</version>
+  <version>0.3.0</version>
   <packaging>pom</packaging>
   <modelVersion>4.0.0</modelVersion>
 
@@ -80,7 +80,21 @@
             <source>1.5</source>
             <target>1.5</target>
           </configuration>
+	</plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <!-- Lock to this version in order to prevent generating corrupted
+               menu structures for sub-modules when running site:site from the
+               parent module. See http://jira.codehaus.org/browse/MSITE-270 for
+               details on this issue. -->
+          <version>2.0-beta-5</version>
+          <configuration>
+            <locales>en</locales>
+            <publishDate position="left" format="yyyy-MM-dd hh:mm:ss" />
+          </configuration>
         </plugin>
+
       </plugins>
     </pluginManagement>
   </build>
@@ -138,16 +152,15 @@
     </repository>
   </repositories>
 
-
   <!-- =========================================================== -->
   <!-- Infrastructure                                              -->
   <!-- =========================================================== -->
 
   <scm>
     <!-- keep empty tags here to avoid release:prepare crashes -->
-    <connection></connection>
-    <developerConnection>scm:svn:https://svn.accada.org/repos/fc</developerConnection>
-    <url></url>
+    <connection>/tags/0.3.0</connection>
+    <developerConnection>scm:svn:https://svn.accada.org/repos/fc/tags/0.3.0</developerConnection>
+    <url>/tags/0.3.0</url>
   </scm>
   <distributionManagement>
     <repository>
