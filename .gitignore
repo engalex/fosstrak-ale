@@ -1,0 +1,15 @@
+
+# /
+/target
+
+# /fc-client/
+/fc-client/target
+
+# /fc-commons/
+/fc-commons/target
+
+# /fc-server/
+/fc-server/target
+
+# /fc-webclient/
+/fc-webclient/target
